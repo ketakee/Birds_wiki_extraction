@@ -1,14 +1,23 @@
 # Birds_wiki_extraction
 
+The goal of the program is to be able to extract the family, sub family and Order of a bird and a summary of the information of the bird from its wikipedia page from the wikipedia page.
 
+*birds.py* returns the family, sub family and Order of the bird where as *birdsummary.py* returns the summary of the bird information present on the wikipedia page. 
 
+<b><i>Method: </i> </b> Uses Python and Regular Expression to fetch the HTML content of the page and then scrape the content between the predefined tags
 
-The goal of the program is to be able to extract the family, sub family and Order of a bird from its wikipedia page from the wikipedia page.
+<b><i>Input: </i> </b> The bird names are provided as a list within the program.
 
-<i>Method: </i> Uses python and regular expression to fetch the html content of the page and then scrape the content between the predefined tags
+<b><i>Output: </i> </b> The outputs are stored in a text file as comma separated values in the order:<i> Name, Order, Family, Sub Family </i>
+            The summary is printed on the console.
 
-<i>Input: </i>. The bird names are to provided as a list within the program.
+<b><i>Major algorithms used:</i> </b> String matching in regex functions. Keyword based Extractive Summarization.
 
-<i> Output: </i> The outputs are stored in a text file as comma separated values in the order:<i> Name, Order, Family, Sub Family </i>
+# *Example* 
+**Summary for the bird GreyLag Goose**
 
-<i> Major algorithms used:</i> String matching in regex functions
+>It has mottled and barred grey and white plumage and an orange beak and pink legs.A clutch of three to five eggs is laid; the female incubates the eggs and both parents defend and rear the young.Two  subspecies  are recognised;  A. a. anser , the western greylag goose, breeds in Iceland and north and central Europe;  A. a. rubrirostris , the eastern greylag goose, breeds in Romania, Turkey and Russia eastwards to northeastern China.It has a rotund, bulky body, a thick and long neck, and a large head and bill.It has pink legs and feet, and an orange or pink bill with a white or brown  nail  (hard horny material at tip of upper mandible).It has a tail 6.2 to 6.9 centimetres (2.4 to 2.7&#160;in), a bill of 6.4 to 6.9 centimetres (2.5 to 2.7&#160;in) long, and a  tarsus  of 7.1 to 9.3 centimetres (2.8 to 3.7&#160;in).The  plumage  of the greylag goose is greyish-brown, with a darker head and paler breast and belly with a variable amount of black spotting.Its plumage is patterned by the pale fringes of the feathers.Adults have a distinctive 'concertina' pattern of folds in the feathers on their necks.The greylag goose has a loud cackling call similar to that of the domestic goose, "aahng-ung-ung", uttered on the ground or in flight.The nominate subspecies breeds in Iceland, Norway, Sweden, Finland, the Baltic States, northern Russia, Poland, eastern Hungary and Romania.It also breeds locally in the United Kingdom, Denmark, Germany, Austria, the Czech Republic, Slovakia and Macedonia.European birds migrate southwards to the Mediterranean region and North Africa.Asian birds migrate to Baluchistan, Azerbaijan, Iran, Pakistan, northern India, Bangladesh and eastward to China.They also visit agricultural land where they feed on winter cereals, rice, beans or other crops, moving at night to shoals and sand-banks on the coast, mud-banks in estuaries or secluded lakes.In wintertime they eat grass and leaves but also glean grain on cereal stubbles and sometimes feed on growing crops, especially during the night.They have been known to feed on  oats ,  wheat ,  barley ,  buckwheat ,  lentils ,  peas  and  root crops .These geese normally pair for life, so courtship only occurs at the time of first maturity.After the eggs hatch, some grouping of families occur, enabling the geese to defend their young by their joint actions, such as mobbing or attacking predators.After driving off a predator, a gander will return to its mate and give a "triumph call", a resonant honk followed by a low-pitched cackle, uttered with neck extended forward parallel with the ground.The mate and even unfledged young reciprocate in kind.At least in Europe, patterns of migration are well understood and follow traditional routes with known staging sites and wintering sites.The young learn these locations from their parents which normally stay together for life.Birds that breed in Iceland overwinter in the British Isles; those from Central Europe overwinter as far south as Spain and North Africa; others migrate down to the Balkans, Turkey and Iraq for the winter.Variant with white "front" In flight Swimming Detail A crossbreed between a wild greylag goose and a  domestic goose  ( A. a. domesticus ), as evidenced by its thick neck and bulky head, both of which display vestigial patterning like certain domestic breeds Head ID composite Flock taking off over water Egg, Collection  Museum Wiesbaden  Female with chicks On  Texel , Netherlands
+
+The summary is about 3700 characters which is almost 1/3rd of the text on the wikipedia page. In general this works well but it could be expanded to classify the sentences in the summary into categories such as <i>Habitat</i>, <i> food habits </i>, <i> migration patterns </i> etc. A naive bag of words approach doesn't work for classification, LDA could be applied in the future. Custom classifier could be made using Naive Bayes classifier and could be trained. We will try these approaches in December.
+
+*This has been done using Regex since back then it seemed a suitable choice, however, in the future, it will be much more preferable to use BeautifulSoup*
